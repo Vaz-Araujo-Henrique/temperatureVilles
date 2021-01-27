@@ -16,6 +16,7 @@ def get_temperature(ville):
     url = "http://api.openweathermap.org/data/2.5/weather?q="+ville+",fr&units=metrics&lang=fr&appid" \
                                                                     "=0a73790ec47f53b9e1f2e33088a0f7d0"
     return float(requests.get(url).json()['main']['temp'])
+    return float(requests.get(url).json()['main']['pressure'])
 
 
 def set_temperature_bdd(temperature, ville):
